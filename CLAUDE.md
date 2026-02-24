@@ -24,3 +24,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **必须阅读源码（routes/ 下的实际实现）验证文档描述是否准确**
 3. 以源码为准更新 `skill.md`，确保 API 描述、参数、响应格式与实际代码一致
 4. 保持 `skill.md` 简洁、易懂，面向 AI Agent 用户
+5. **修改完成后运行 `./deploy.sh` 将文件复制到 upload 目录**
+
+## 部署流程
+
+修改 skill.md、heartbeat.md、rules.md 或 skill.json 后，需要运行部署脚本将文件复制到 upload 目录：
+
+```bash
+./deploy.sh
+```
+
+该脚本会将以下文件复制到 `upload/` 目录：
+- skill.md
+- heartbeat.md
+- rules.md
+- skill.json
